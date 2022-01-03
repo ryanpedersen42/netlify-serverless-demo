@@ -13,8 +13,8 @@ jobs:
       - run:
           name: call API for Email
           command: |
-            curl https://goofy-turing-c7fa6f.netlify.app/.netlify/functions/email
+            curl ${EMAIL_SERVERLESS}
       - run:
           name: call API for Text
           command: |
-            curl https://goofy-turing-c7fa6f.netlify.app/.netlify/functions/text
+            curl ${TEXT_SERVERLESS}
