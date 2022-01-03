@@ -1,0 +1,20 @@
+version: 2.1
+
+workflows:
+  start_cron:
+    jobs: 
+     - cron_me
+
+jobs:
+  cron_me:
+    docker:
+      - image: cimg/base:stable
+    steps:
+      - run:
+          name: call API for Email
+          command: |
+            curl https://goofy-turing-c7fa6f.netlify.app/.netlify/functions/email
+      - run:
+          name: call API for Text
+          command: |
+            curl https://goofy-turing-c7fa6f.netlify.app/.netlify/functions/text
