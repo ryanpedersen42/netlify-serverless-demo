@@ -39,3 +39,7 @@ MAILGUN_DOMAIN
 2. Follow and onboard project.
 3. Update serverless endpoints with yours (update the project envars or include in config).
 4. Go to Project Settings > Triggers > Add Scheduled Trigger. Create your trigger.
+
+### Packages to install
+
+`twilio`, `mailgun-js`, and `axios`
